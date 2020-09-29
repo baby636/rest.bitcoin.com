@@ -2346,7 +2346,7 @@ async function txsByAddressSingle(
     }
 
     const fromBlock: number = req.query.fromBlock
-      ? parseInt(req.query.fromBlock, 10)
+      ? parseInt(req.query.fromBlock.toString(), 10)
       : 0
 
     // Ensure the input is a valid BCH address.

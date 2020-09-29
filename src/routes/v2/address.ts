@@ -110,7 +110,7 @@ async function detailsSingle(
   try {
     const address: string = req.params.address
     const currentPage: number = req.query.page
-      ? parseInt(req.query.page, 10)
+      ? parseInt(req.query.page.toString(), 10)
       : 0
 
     if (!address || address === "") {
@@ -762,7 +762,7 @@ async function transactionsSingle(
   try {
     const address: string = req.params.address
     const currentPage: number = req.query.page
-      ? parseInt(req.query.page, 10)
+      ? parseInt(req.query.page.toString(), 10)
       : 0
 
     if (!address || address === "") {
@@ -841,7 +841,7 @@ async function fromXPubSingle(
 ): Promise<express.Response> {
   try {
     const xpub: string = req.params.xpub
-    const hdPath: string = req.query.hdPath ? req.query.hdPath : "0"
+    const hdPath: string = req.query.hdPath ? req.query.hdPath.toString() : "0"
 
     if (!xpub || xpub === "") {
       res.status(400)

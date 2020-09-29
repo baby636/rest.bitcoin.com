@@ -87,8 +87,8 @@ async function getNetworkHashPS(
   try {
     let nblocks: number = 120 // Default
     let height: number = -1 // Default
-    if (req.query.nblocks) nblocks = parseInt(req.query.nblocks)
-    if (req.query.height) height = parseInt(req.query.height)
+    if (req.query.nblocks) nblocks = parseInt(req.query.nblocks.toString())
+    if (req.query.height) height = parseInt(req.query.height.toString())
 
     const { BitboxHTTP, requestConfig } = routeUtils.setEnvVars()
 
