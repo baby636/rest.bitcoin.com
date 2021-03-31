@@ -1728,3 +1728,48 @@
 .swagger-ui .opblock-body pre .headerline {
   display: block;
 }
+
+.sunset-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  z-index: 99999;
+  top: 0px;
+  left: 0px;
+}
+
+.sunset-overlay:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  background: rgb(0, 0, 0);
+}
+
+.sunset-msg {
+  font-family: Open Sans, sans-serif;
+  line-height: 1.5;
+  padding: 12px 24px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background: rgb(251, 252, 255);
+  max-height: 100vh;
+  max-width: 640px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.sunset-msg a {
+  transition: all 0.4s;
+  color: #4990e2;
+  font-weight: bold;
+  text-decoration: underline;
+}
