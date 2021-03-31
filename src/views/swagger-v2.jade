@@ -20,7 +20,7 @@ html(lang='en')
       {
       box-sizing: border-box;
       overflow: -moz-scrollbars-vertical;
-      overflow-y: scroll;
+      overflow-y: hidden;
       }
       *,
       *:before,
@@ -31,9 +31,24 @@ html(lang='en')
       body
       {
       margin:0;
+      height: 100%;
+      overflow: hidden;
       background: #ffffff;
       }
   body
+    .sunset-overlay
+      .sunset-msg
+        p Dear #[strong rest.bitcoin.com] developers,
+        p
+          | As some of you may have noticed, the free, public rest.bitcoin.com endpoints have at times been
+          | unstable due to dramatically increased load from the growing number of products and services using it.
+          | In order to continue providing the best developer experience possible, we’re upgrading this free
+          | service to run on #[a(href="https://fullstack.cash/") Fullstack.cash].
+        p This change is effective immediately, so please ensure you update your endpoints to #[strong api.fullstack.cash] as soon as possible.
+        p
+          | #[a(href="https://fullstack.cash/") Fullstack.cash] is free to use for 20 full-node, indexer, and SLPDB requests per minute.
+          | For comprehensive plans, please refer to the #[a(href="https://fullstack.cash/pricing/") pricing page].
+        p Sincerely, #[br] The Bitcoin.com Team
     #swagger-ui
     script(src='../public/swagger-ui-bundle.js')
     script(src='../public/swagger-ui-standalone-preset.js')
