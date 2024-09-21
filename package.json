@@ -57,7 +57,7 @@
     "pg": "^6.2.3",
     "pg-hstore": "^2.3.2",
     "slp-sdk": "^4.15.0",
-    "socket.io": "^2.1.1",
+    "socket.io": "^4.8.0",
     "strftime": "^0.10.0",
     "swagger-stats": "^0.95.6",
     "winston": "^3.2.1",
